@@ -10,6 +10,6 @@
     "start": "node server.mjs"
   },
   "dependencies": {
-    "ws": "8.18.3"
+    "ws": "8.22.0"
   }
 }
