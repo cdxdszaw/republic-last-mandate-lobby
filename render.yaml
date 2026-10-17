@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: republic-last-mandate-lobby
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev
+    startCommand: node server.mjs
+    healthCheckPath: /health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: MAX_CLIENTS
+        value: 30
+      - key: TRUST_PROXY
+        value: 0
